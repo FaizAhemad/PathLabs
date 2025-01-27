@@ -1,4 +1,5 @@
 import {
+  ArrowRightOutlined,
   DashboardOutlined,
   FileOutlined,
   GlobalOutlined,
@@ -22,6 +23,7 @@ const icons: Record<string, JSX.Element> = {
   attachment: <PaperClipOutlined style={{fontSize: "20px"}} />,
   signup: <UserAddOutlined></UserAddOutlined>,
   language: <GlobalOutlined style={{fontSize: "20px"}}></GlobalOutlined>,
+  arrowRight: <ArrowRightOutlined style={{fontSize: "16px"}} />,
   // Add more icons as needed
 };
 

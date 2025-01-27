@@ -1,11 +1,10 @@
 import {Button, Carousel, Col, Flex, Image, Row, Splitter, Tag} from "antd";
-import React, {useState} from "react";
+import React from "react";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router";
 import icons from "../../icons";
 
 const Home: React.FC = () => {
-  const [loading] = useState<boolean>(true);
   const navigate = useNavigate();
   const {t} = useTranslation("homepage");
 
@@ -80,8 +79,8 @@ const Home: React.FC = () => {
       <div style={{marginTop: "40px"}}>
         <h2>{t("lab_tests_by_health_concern")}</h2>
         <h3>
-          {t("powered_by")}{" "}
-          <Image width={40} height={30} src="images/logoWhite.png"></Image>{" "}
+          {t("powered_by")}
+          <Image width={40} height={30} src="images/logoWhite.png"></Image>
         </h3>
         <div style={{marginTop: "20px"}} className="carousel-container">
           <Carousel
@@ -215,7 +214,6 @@ const Home: React.FC = () => {
                   style={{flexDirection: "column", height: "100%", gap: 10}}
                 >
                   <h2 style={{color: "#33393f"}}>
-                    {" "}
                     {t("order_with_prescription")}
                   </h2>
                   <p style={{color: "#666e75"}}>
@@ -260,7 +258,7 @@ const Home: React.FC = () => {
                     color="processing"
                   >
                     1
-                  </Tag>{" "}
+                  </Tag>
                   {t("upload_a_photo_of_your_prescription")}
                 </Col>
                 <Col
@@ -281,7 +279,7 @@ const Home: React.FC = () => {
                     color="processing"
                   >
                     3
-                  </Tag>{" "}
+                  </Tag>
                   {t("we_will_call_you_to_confirm_the_medicines")}
                 </Col>
               </Row>
@@ -304,7 +302,7 @@ const Home: React.FC = () => {
                     color="processing"
                   >
                     2
-                  </Tag>{" "}
+                  </Tag>
                   {t("add_delivery_address_and_place_the_order")}
                 </Col>
                 <Col
@@ -324,8 +322,8 @@ const Home: React.FC = () => {
                     }}
                     color="processing"
                   >
-                    4{" "}
-                  </Tag>{" "}
+                    4
+                  </Tag>
                   {t(
                     "now_sit_back_your_medicines_will_get_delivered_at_your_doorstep"
                   )}
