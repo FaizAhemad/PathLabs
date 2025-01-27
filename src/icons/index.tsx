@@ -1,6 +1,7 @@
 import {
   DashboardOutlined,
   FileOutlined,
+  GlobalOutlined,
   HomeOutlined,
   LoginOutlined,
   LogoutOutlined,
@@ -20,6 +21,7 @@ const icons: Record<string, JSX.Element> = {
   logout: <LogoutOutlined />,
   attachment: <PaperClipOutlined style={{fontSize: "20px"}} />,
   signup: <UserAddOutlined></UserAddOutlined>,
+  language: <GlobalOutlined style={{fontSize: "20px"}}></GlobalOutlined>,
   // Add more icons as needed
 };
 

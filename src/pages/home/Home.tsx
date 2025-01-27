@@ -49,7 +49,7 @@ const Home: React.FC = () => {
     <div style={{margin: "40px 0"}}>
       <div className="carousel-container">
         <Carousel
-          draggable
+          draggable={false}
           slidesToShow={2.5}
           autoplay
           arrows
@@ -155,9 +155,9 @@ const Home: React.FC = () => {
         </h3>
         <div style={{marginTop: "20px"}} className="carousel-container">
           <Carousel
-            draggable
+            draggable={false}
             slidesToShow={6.5}
-            autoplay
+            autoplay={false}
             centerMode={false}
             centerPadding="10px"
             autoplaySpeed={3000}
