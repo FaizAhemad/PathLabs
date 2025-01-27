@@ -1,0 +1,20 @@
+{
+  "title": "Bienvenue chez Pathan's Labs",
+  "subtitle": "Votre partenaire de santé de confiance",
+  "home": "Accueil",
+  "dashboard": "Tableau de bord",
+  "profile": "Profil",
+  "login": "Se connecter",
+  "signup": "S'inscrire",
+  "page_not_found": "Page non trouvée",
+  "lab_tests_by_health_concern": "Tests de laboratoire par problème de santé",
+  "powered_by": "Alimenté par",
+  "order_with_prescription": "Commander avec une prescription",
+  "upload_prescription_and_we_will_deliver_your_medicines": "Téléchargez votre ordonnance et nous vous livrerons vos médicaments",
+  "upload": "Télécharger",
+  "how_does_this_work": "Comment cela fonctionne-t-il?",
+  "upload_a_photo_of_your_prescription": "Téléchargez une photo de votre ordonnance",
+  "we_will_call_you_to_confirm_the_medicines": "Nous vous appellerons pour confirmer les médicaments",
+  "add_delivery_address_and_place_the_order": "Ajoutez une adresse de livraison et passez la commande",
+  "now_sit_back_your_medicines_will_get_delivered_at_your_doorstep": "Détendez-vous maintenant ! vos médicaments seront livrés à votre porte"
+}

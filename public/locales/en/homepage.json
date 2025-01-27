@@ -1,0 +1,20 @@
+{
+  "title": "Welcome to Pathan's Labs",
+  "subtitle": "Your trusted healthcare partner",
+  "home": "Home",
+  "dashboard": "Dashboard",
+  "profile": "Profile",
+  "login": "Login",
+  "signup": "Sign up",
+  "page_not_found": "Page Not Found",
+  "lab_tests_by_health_concern": "Lab Tests by Health Concern",
+  "powered_by": "Powered by",
+  "order_with_prescription": "Order with Prescription",
+  "upload_prescription_and_we_will_deliver_your_medicines": "Upload prescription and we will deliver your medicines",
+  "upload": "Upload",
+  "how_does_this_work": "How does this work?",
+  "upload_a_photo_of_your_prescription": "Upload a photo of your prescription",
+  "we_will_call_you_to_confirm_the_medicines": "We will call you to confirm the medicines",
+  "add_delivery_address_and_place_the_order": "Add delivery address and place the order",
+  "now_sit_back_your_medicines_will_get_delivered_at_your_doorstep": "Now, sit back! your medicines will get delivered at your doorsteps"
+}
