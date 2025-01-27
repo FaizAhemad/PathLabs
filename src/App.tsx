@@ -1,12 +1,4 @@
-import {
-  DashboardOutlined,
-  HomeOutlined,
-  LoginOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  ProfileOutlined,
-  UserAddOutlined,
-} from "@ant-design/icons";
+import {MenuFoldOutlined, MenuUnfoldOutlined} from "@ant-design/icons";
 import {
   Button,
   Dropdown,
@@ -122,30 +114,28 @@ function App() {
           }}
           items={[
             {
-              key: "/home",
-              icon: <HomeOutlined />,
-              title: "Home",
+              key: "home",
+              icon: icons["home"],
+              title: t("home"),
               label: t("home"),
             },
             {
               key: "profile",
-              icon: <ProfileOutlined />,
+              icon: icons["profile"],
+              title: t("profile"),
               label: t("profile"),
             },
             {
               key: "dashboard",
-              icon: <DashboardOutlined />,
+              icon: icons["dashboard"],
+              title: t("dashboard"),
               label: t("dashboard"),
             },
             {
-              key: "login",
-              icon: <LoginOutlined />,
-              label: t("login"),
-            },
-            {
-              key: "signup",
-              icon: <UserAddOutlined />,
-              label: t("signup"),
+              key: "login-signup",
+              icon: icons["user"],
+              title: t("login_and_signup"),
+              label: t("login_and_signup"),
             },
           ]}
         />
@@ -187,7 +177,7 @@ function App() {
             menu={{items: languageDropdownItems}}
             placement="bottomLeft"
           >
-            <Button type="text">{icons["language"]}</Button>
+            <Button type="text"> Language {icons["language"]}</Button>
           </Dropdown>
         </Header>
 

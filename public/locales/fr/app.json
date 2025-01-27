@@ -1,6 +1,7 @@
 {
   "logout": "Déconnexion",
   "login": "Connexion",
+  "login_and_signup": "Connexion et Inscription",
   "profile": "Profil",
   "home": "Accueil",
   "dashboard": "Tableau de bord",

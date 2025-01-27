@@ -22,12 +22,13 @@ if (typeof i18n === "object" && i18n !== null) {
 
 import App from "./App.tsx";
 import "./index.css";
+import LoginAndSignup from "./pages/auth/LoginAndSignup.tsx";
 import Home from "./pages/home/Home.tsx";
 import {PageNotFound} from "./pages/not-found/PageNotFound.tsx";
 import Offer from "./pages/offers/Offer.tsx";
 import Offers from "./pages/offers/Offers.tsx";
-import Test from "./pages/tests/test.tsx";
-import Tests from "./pages/tests/tests.tsx";
+import Test from "./pages/tests/Test.tsx";
+import Tests from "./pages/tests/Tests.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -35,6 +36,11 @@ createRoot(document.getElementById("root")!).render(
       <Router>
         <Routes>
           <Route path="/" element={<Navigate to="home" />}></Route>
+          <Route
+            path="/login-signup"
+            element={<LoginAndSignup></LoginAndSignup>}
+          ></Route>
+
           <Route path="/" element={<App />}>
             <Route path="home" element={<Home />}></Route>
             <Route path="offers">

@@ -5,6 +5,7 @@
   "dashboard": "لوحة التحكم",
   "profile": "الملف الشخصي",
   "login": "تسجيل الدخول",
+  "login_and_signup": "تسجيل الدخول والتسجيل",
   "signup": "التسجيل",
   "page_not_found": "الصفحة غير موجودة",
   "lab_tests_by_health_concern": "اختبارات المختبر حسب القلق الصحي",

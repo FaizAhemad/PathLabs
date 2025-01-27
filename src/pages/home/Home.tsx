@@ -1,15 +1,4 @@
-import {
-  Avatar,
-  Button,
-  Card,
-  Carousel,
-  Col,
-  Flex,
-  Image,
-  Row,
-  Splitter,
-  Tag,
-} from "antd";
+import {Button, Carousel, Col, Flex, Image, Row, Splitter, Tag} from "antd";
 import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router";
@@ -88,65 +77,6 @@ const Home: React.FC = () => {
         </Carousel>
       </div>
 
-      <Flex justify="space-between" style={{marginTop: "40px"}}>
-        <Card loading={loading} style={{width: 300}}>
-          <Card.Meta
-            avatar={
-              <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
-            }
-            title="Card title"
-            description={
-              <>
-                <p>This is the description</p>
-                <p>This is the description</p>
-              </>
-            }
-          />
-        </Card>
-        <Card loading={loading} style={{width: 300}}>
-          <Card.Meta
-            avatar={
-              <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
-            }
-            title="Card title"
-            description={
-              <>
-                <p>This is the description</p>
-                <p>This is the description</p>
-              </>
-            }
-          />
-        </Card>
-        <Card loading={loading} style={{width: 300}}>
-          <Card.Meta
-            avatar={
-              <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
-            }
-            title="Card title"
-            description={
-              <>
-                <p>This is the description</p>
-                <p>This is the description</p>
-              </>
-            }
-          />
-        </Card>
-        <Card loading={loading} style={{width: 300}}>
-          <Card.Meta
-            avatar={
-              <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />
-            }
-            title="Card title"
-            description={
-              <>
-                <p>This is the description</p>
-                <p>This is the description</p>
-              </>
-            }
-          />
-        </Card>
-      </Flex>
-
       <div style={{marginTop: "40px"}}>
         <h2>{t("lab_tests_by_health_concern")}</h2>
         <h3>
@@ -161,7 +91,7 @@ const Home: React.FC = () => {
             centerMode={false}
             centerPadding="10px"
             autoplaySpeed={3000}
-            infinite={false}
+            infinite
             dots={false}
             arrows
             responsive={[
@@ -394,7 +324,7 @@ const Home: React.FC = () => {
                     }}
                     color="processing"
                   >
-                    4
+                    4{" "}
                   </Tag>{" "}
                   {t(
                     "now_sit_back_your_medicines_will_get_delivered_at_your_doorstep"

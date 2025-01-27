@@ -90,7 +90,7 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 50px; /* Adjust for desired blur width */
+  width: 100px; /* Adjust for desired blur width */
   height: auto;
   z-index: 1;
   pointer-events: none;
