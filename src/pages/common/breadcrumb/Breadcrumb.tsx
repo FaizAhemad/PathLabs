@@ -16,7 +16,7 @@ const Breadcrumbs = () => {
       title: (
         <>
           <NavLink to="/home">
-            {icons["home"]}{" "}
+            {icons["home"]}
             <Typography
               style={{
                 textTransform: "capitalize",
@@ -25,7 +25,7 @@ const Breadcrumbs = () => {
               }}
             >
               {t("home".toLowerCase())}
-            </Typography>{" "}
+            </Typography>
           </NavLink>
         </>
       ),
