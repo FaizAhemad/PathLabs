@@ -12,7 +12,7 @@ import {
 } from "antd";
 import {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
-import {Outlet, useNavigate} from "react-router";
+import {Outlet, useLocation, useNavigate} from "react-router";
 import icons from "./icons";
 import Breadcrumbs from "./pages/common/breadcrumb/Breadcrumb";
 function App() {
@@ -23,6 +23,35 @@ function App() {
     token: {colorBgContainer, borderRadiusLG},
   } = theme.useToken();
   const [direction, setDirection] = useState<"ltr" | "rtl">("ltr");
+  const [selectedKeys, setSelectedKeys] = useState(["home"]);
+  const location = useLocation();
+  const sideBarItems = [
+    {
+      key: "home",
+      icon: icons["home"],
+      title: t("home"),
+      label: t("home"),
+    },
+    {
+      key: "profile",
+      icon: icons["profile"],
+      title: t("profile"),
+      label: t("profile"),
+    },
+    {
+      key: "dashboard",
+      icon: icons["dashboard"],
+      title: t("dashboard"),
+      label: t("dashboard"),
+    },
+    {
+      key: "login-signup",
+      icon: icons["user"],
+      title: t("login_and_signup"),
+      label: t("login_and_signup"),
+    },
+  ];
+
   useEffect(() => {
     if (i18n.language === "ar" || i18n.language === "ur") {
       setDirection("rtl");
@@ -80,6 +109,12 @@ function App() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    setSelectedKeys([`${location.pathname.replace("/", "")}`]);
+  }, [location]);
+
+  console.log(selectedKeys);
+
   return (
     <Layout dir={direction} style={{minHeight: "100vh"}}>
       <Sider
@@ -107,37 +142,13 @@ function App() {
           expandIcon
           theme="dark"
           mode="vertical"
+          selectedKeys={selectedKeys}
           defaultSelectedKeys={["/home"]}
           defaultOpenKeys={["home"]}
           onSelect={(props) => {
             navigate(props.key);
           }}
-          items={[
-            {
-              key: "home",
-              icon: icons["home"],
-              title: t("home"),
-              label: t("home"),
-            },
-            {
-              key: "profile",
-              icon: icons["profile"],
-              title: t("profile"),
-              label: t("profile"),
-            },
-            {
-              key: "dashboard",
-              icon: icons["dashboard"],
-              title: t("dashboard"),
-              label: t("dashboard"),
-            },
-            {
-              key: "login-signup",
-              icon: icons["user"],
-              title: t("login_and_signup"),
-              label: t("login_and_signup"),
-            },
-          ]}
+          items={sideBarItems}
         />
       </Sider>
       <Layout>

@@ -36,12 +36,11 @@ createRoot(document.getElementById("root")!).render(
       <Router>
         <Routes>
           <Route path="/" element={<Navigate to="home" />}></Route>
-          <Route
-            path="/login-signup"
-            element={<LoginAndSignup></LoginAndSignup>}
-          ></Route>
-
           <Route path="/" element={<App />}>
+            <Route
+              path="/login-signup"
+              element={<LoginAndSignup></LoginAndSignup>}
+            ></Route>
             <Route path="home" element={<Home />}></Route>
             <Route path="offers">
               <Route path="/offers" element={<Offers />}></Route>

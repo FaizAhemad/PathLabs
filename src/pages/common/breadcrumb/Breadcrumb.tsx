@@ -1,4 +1,5 @@
 import {Breadcrumb, Typography} from "antd";
+import {useEffect} from "react";
 import {useTranslation} from "react-i18next";
 import {NavLink, useLocation} from "react-router-dom";
 import icons from "../../../icons";
@@ -10,6 +11,7 @@ const Breadcrumbs = () => {
   // Split the current path into segments
   const pathSegments = location.pathname.split("/").filter((path) => path);
 
+  useEffect(() => {}, [location]);
   // Generate breadcrumb items
   const breadcrumbItems = [
     {
@@ -33,8 +35,7 @@ const Breadcrumbs = () => {
     ...pathSegments.map((segment: string, index: number) => {
       const url = `/${pathSegments.slice(0, index + 1).join("/")}`;
       const icon = icons[segment.toLowerCase()] || null;
-      console.log(segment);
-      if (!url.includes("home"))
+      if (!url.includes("home") && !location.pathname.includes("login-signup"))
         return {
           title: (
             <NavLink to={url}>
