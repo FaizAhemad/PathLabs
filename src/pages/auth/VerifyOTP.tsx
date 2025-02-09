@@ -5,6 +5,7 @@ import icons from "../../icons";
 export default function VerifyOTP({
   otpSent = true,
   mobileNumber = "7620808890",
+  goToSlide = (num: number) => {},
 }) {
   const [messageApi, contextHolder] = message.useMessage();
   const otpLength = 6; // Number of OTP digits
@@ -107,6 +108,10 @@ export default function VerifyOTP({
     }, 3000);
   };
 
+  const onEditNumber = () => {
+    goToSlide(0);
+  };
+
   return (
     <>
       {contextHolder}
@@ -119,7 +124,9 @@ export default function VerifyOTP({
           <Typography style={{fontWeight: "600"}}>Enter OTP</Typography>
           <Typography>
             We have sent an OTP on <b>{mobileNumber}</b>
-            <Button type="link">Edit Number</Button>
+            <Button type="link" onClick={onEditNumber}>
+              Edit Number
+            </Button>
           </Typography>
         </div>
 
@@ -136,7 +143,6 @@ export default function VerifyOTP({
               style={{
                 width: 40,
                 textAlign: "center",
-                fontSize: 18,
                 marginRight: 5,
               }}
             />

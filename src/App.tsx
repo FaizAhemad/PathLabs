@@ -122,7 +122,7 @@ function App() {
         collapsible
         collapsed={collapsed}
         breakpoint="lg"
-        collapsedWidth="0"
+        // collapsedWidth="0" this will cause issue when we want icons on collapse
         onCollapse={(collapsed) => {
           setCollapsed(collapsed);
         }}
@@ -168,7 +168,6 @@ function App() {
               icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
               onClick={() => setCollapsed(!collapsed)}
               style={{
-                fontSize: "16px",
                 width: 64,
                 height: 64,
               }}

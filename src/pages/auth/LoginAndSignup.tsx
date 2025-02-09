@@ -42,7 +42,7 @@ export default function LoginAndSignup() {
           <Signup goToSlide={goToSlide} />
         </div>
         <div>
-          <VerifyOTP />
+          <VerifyOTP goToSlide={goToSlide} />
         </div>
       </Carousel>
     </div>

@@ -23,6 +23,7 @@ if (typeof i18n === "object" && i18n !== null) {
 import App from "./App.tsx";
 import "./index.css";
 import LoginAndSignup from "./pages/auth/LoginAndSignup.tsx";
+import Dashboard from "./pages/dashboard/Dashboard.tsx";
 import Home from "./pages/home/Home.tsx";
 import {PageNotFound} from "./pages/not-found/PageNotFound.tsx";
 import Offer from "./pages/offers/Offer.tsx";
@@ -41,6 +42,8 @@ createRoot(document.getElementById("root")!).render(
               path="/login-signup"
               element={<LoginAndSignup></LoginAndSignup>}
             ></Route>
+            <Route path="dashboard" element={<Dashboard />}></Route>
+
             <Route path="home" element={<Home />}></Route>
             <Route path="offers">
               <Route path="/offers" element={<Offers />}></Route>
