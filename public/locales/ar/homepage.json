@@ -1,0 +1,21 @@
+{
+  "title": "مرحبًا بك في مختبرات باتان",
+  "subtitle": "شريكك الموثوق في الرعاية الصحية",
+  "home": "الرئيسية",
+  "dashboard": "لوحة التحكم",
+  "profile": "الملف الشخصي",
+  "login": "تسجيل الدخول",
+  "login_and_signup": "تسجيل الدخول والتسجيل",
+  "signup": "التسجيل",
+  "page_not_found": "الصفحة غير موجودة",
+  "lab_tests_by_health_concern": "اختبارات المختبر حسب القلق الصحي",
+  "powered_by": "مدعوم من",
+  "order_with_prescription": "الطلب بوصفة طبية",
+  "upload_prescription_and_we_will_deliver_your_medicines": "حمّل الوصفة وسنقوم بتوصيل أدويتك",
+  "upload": "رفع",
+  "how_does_this_work": "كيف يعمل هذا؟",
+  "upload_a_photo_of_your_prescription": "حمّل صورة لوصفتك",
+  "we_will_call_you_to_confirm_the_medicines": "سوف نتصل بك لتأكيد الأدوية",
+  "add_delivery_address_and_place_the_order": "أضف عنوان التسليم وقم بإجراء الطلب",
+  "now_sit_back_your_medicines_will_get_delivered_at_your_doorstep": "الآن، استرخ! سيتم توصيل أدويتك إلى باب منزلك"
+}
