@@ -1,4 +1,4 @@
-import {Breadcrumb, Typography} from "antd";
+import {Breadcrumb, Grid, Typography} from "antd";
 import {useEffect} from "react";
 import {useTranslation} from "react-i18next";
 import {NavLink, useLocation} from "react-router-dom";
@@ -7,6 +7,8 @@ import icons from "../../../icons";
 const Breadcrumbs = () => {
   const location = useLocation();
   const {t} = useTranslation("app");
+  const {useBreakpoint} = Grid;
+  const {xs} = useBreakpoint();
 
   // Split the current path into segments
   const pathSegments = location.pathname.split("/").filter((path) => path);
@@ -26,7 +28,7 @@ const Breadcrumbs = () => {
                 margin: "0 5px",
               }}
             >
-              {t("home".toLowerCase())}
+              {xs ? "" : t("home".toLowerCase()).replace(/-/g, " ")}
             </Typography>
           </NavLink>
         </>
@@ -47,7 +49,7 @@ const Breadcrumbs = () => {
                   margin: "0 5px",
                 }}
               >
-                {t(segment.toLowerCase())}
+                {xs ? "" : t(segment.toLowerCase().replace(/-/g, " "  ))}
               </Typography>
             </NavLink>
           ),

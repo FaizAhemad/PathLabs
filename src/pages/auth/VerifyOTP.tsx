@@ -1,6 +1,7 @@
-import {Button, Flex, Input, InputRef, message, Space, Typography} from "antd";
+import {Flex, Input, InputRef, message, Space, Typography} from "antd";
 import {useCallback, useEffect, useRef, useState} from "react";
 import icons from "../../icons";
+import Button from "../../ui/button";
 
 export default function VerifyOTP({
   otpSent = true,
@@ -161,8 +162,9 @@ export default function VerifyOTP({
           style={{alignSelf: "start"}}
           loading={verifying}
           onClick={onVerify}
+          icon={icons["arrowRight"]}
         >
-          Verify {icons["arrowRight"]}
+          Verify
         </Button>
 
         <Typography>

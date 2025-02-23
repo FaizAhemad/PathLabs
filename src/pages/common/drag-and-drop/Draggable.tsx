@@ -1,4 +1,4 @@
-import {useDraggable} from "@dnd-kit/core";
+import {useDraggable} from "@dnd-kit/corec";
 import {CSS} from "@dnd-kit/utilities";
 import {Button} from "antd";
 

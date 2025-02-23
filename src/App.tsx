@@ -1,6 +1,5 @@
 import {MenuFoldOutlined, MenuUnfoldOutlined} from "@ant-design/icons";
 import {
-  Button,
   Dropdown,
   Flex,
   Image,
@@ -15,7 +14,9 @@ import {useTranslation} from "react-i18next";
 import {Outlet, useLocation, useNavigate} from "react-router";
 import icons from "./icons";
 import Breadcrumbs from "./pages/common/breadcrumb/Breadcrumb";
+import Button from "./ui/button";
 function App() {
+  console.log(import.meta.env.VITE_API_URL);
   const {i18n, t} = useTranslation("app");
   const {Header, Content, Footer, Sider} = Layout;
   const [collapsed, setCollapsed] = useState(false);
@@ -43,6 +44,44 @@ function App() {
       icon: icons["dashboard"],
       title: t("dashboard"),
       label: t("dashboard"),
+      children: [
+        {
+          key: "/dashboard/key-performance-metrics",
+          icon: "",
+          title: "Key Performance Metrics (KPIs)",
+          label: "Key Performance Metrics (KPIs)",
+        },
+        {
+          key: "/dashboard/test-report-and-processing-data",
+          icon: "",
+          title: "Test Reports & Processing Data",
+          label: "Test Reports & Processing Data",
+        },
+        {
+          key: "/dashboard/revenue-and-billing-data",
+          icon: "",
+          title: "Revenue & Billing Data",
+          label: "Revenue & Billing Data",
+        },
+        {
+          key: "/dashboard/inventory-and-stock-data",
+          icon: "",
+          title: "Inventory & Stock Data",
+          label: "Inventory & Stock Data",
+        },
+        {
+          key: "/dashboard/technician-and-staff-performance",
+          icon: "",
+          title: "Technician & Staff Performance",
+          label: "Technician & Staff Performance",
+        },
+        {
+          key: "/dashboard/health-trends-and-analytics",
+          icon: "",
+          title: "Health Trends & Analytics",
+          label: "Health Trends & Analytics",
+        },
+      ],
     },
     {
       key: "login-signup",
@@ -206,10 +245,10 @@ function App() {
         >
           <Outlet />
         </Content>
-        <Footer style={{textAlign: "center"}}>
+        {/* <Footer style={{textAlign: "center"}}>
           Af Design ©{new Date().getFullYear()} Created by Faiz Ahemad Usman
           Gani Shaikh
-        </Footer>
+        </Footer> */}
       </Layout>
     </Layout>
   );
