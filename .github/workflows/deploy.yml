@@ -2,7 +2,7 @@ name: Deploy Vite App to GitHub Pages
 
 on:
   push:
-    branches: [master, development]  # Runs when pushing to main branch
+    branches: [master, development] # Runs when pushing to main branch
 
 permissions:
   contents: read
@@ -30,9 +30,9 @@ jobs:
         run: npm run build
 
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
-          path: ./dist  # The build output folder
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         id: deployment
