@@ -1,0 +1,21 @@
+{
+  "title": "पठाणची प्रयोगशाळेत स्वागत आहे",
+  "subtitle": "तुमचा विश्वासार्ह आरोग्य साथीदार",
+  "home": "मुख्यपृष्ठ",
+  "dashboard": "डॅशबोर्ड",
+  "profile": "प्रोफाइल",
+  "login": "लॉग इन",
+  "signup": "साइन अप",
+  "login_and_signup": "लॉगिन आणि साइन अप",
+  "page_not_found": "पृष्ठ सापडले नाही",
+  "lab_tests_by_health_concern": "आरोग्य समस्येच्या आधारावर लॅब चाचण्या",
+  "powered_by": "शक्ती प्राप्त",
+  "order_with_prescription": "नस्खेहसह ऑर्डर करा",
+  "upload_prescription_and_we_will_deliver_your_medicines": "नस्खा अपलोड करा आणि आम्ही तुमची औषधं तुमच्या दारावर पोहोचवू",
+  "upload": "अपलोड करा",
+  "how_does_this_work": "हे कसे कार्य करते?",
+  "upload_a_photo_of_your_prescription": "तुमच्या नस्ख्याचा फोटो अपलोड करा",
+  "we_will_call_you_to_confirm_the_medicines": "आम्ही औषधांची पुष्टी करण्यासाठी तुम्हाला कॉल करू",
+  "add_delivery_address_and_place_the_order": "डिलिव्हरी पत्ता जोडा आणि ऑर्डर करा",
+  "now_sit_back_your_medicines_will_get_delivered_at_your_doorstep": "आता आराम करा! तुमची औषधं तुमच्या दारावर पोहोचवली जातील"
+}

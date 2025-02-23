@@ -1,0 +1,120 @@
+/* Initial Setup Start */
+
+/* Apply universal reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent box-sizing for all elements */
+}
+
+/* HTML setup */
+html {
+  font-size: 16px; /* Base font size */
+  line-height: 1.5; /* Improves readability */
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Body setup */
+body {
+  font-family: "Roboto", Arial, sans-serif; /* Set a global font family */
+  color: #333; /* Default text color */
+  background-color: #f9f9f9; /* Light background for better contrast */
+  overflow-x: hidden; /* Hide horizontal overflow (better than hidden for y-axis) */
+  padding: 0;
+  margin: 0;
+}
+
+/* Initial Setup ends */
+
+/* Change the color of the dots (inactive state) */
+.slick-slider ul.slick-dots li button,
+.slick-slider ul.slick-dots li:hover,
+.slick-slider ul.slick-dots li button:hover {
+  background-color: silver;
+}
+
+/* Change the color of the active dot */
+.slick-slider ul.slick-dots li.slick-active button {
+  background-color: blue;
+}
+
+.slick-next::after,
+.slick-prev::after {
+  top: 39% !important;
+  left: 33% !important;
+}
+
+.slick-prev::after {
+  left: 42% !important;
+}
+
+/* Style for the next arrow button */
+.slick-next,
+.slick-prev {
+  background-color: black !important; /* Black background */
+  color: white !important; /* White arrow */
+  border-radius: 50% !important; /* Circular shape */
+  width: 50px !important; /* Width of the button */
+  height: 50px !important; /* Height of the button */
+  display: flex !important; /* Use flexbox to center the arrow */
+  justify-content: center !important; /* Horizontally center the arrow */
+  align-items: center !important; /* Vertically center the arrow */
+  box-shadow: none !important; /* Remove shadow */
+  cursor: pointer !important; /* Pointer cursor */
+  z-index: 2 !important;
+}
+.slick-prev {
+  /* left: -15px !important; */
+}
+
+.slick-next:hover {
+  background-color: #333 !important; /* Change background on hover */
+}
+
+.slick-next svg,
+.slick-prev svg {
+  display: block !important; /* Remove any extra space around the SVG */
+  fill: white; /* Make the arrow white */
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden; /* Ensure elements stay inside the container */
+}
+
+.carousel-container::before,
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px; /* Adjust for desired blur width */
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.carousel-container .ant-carousel .slick-slide img {
+  width: 100%; /* Ensure the images stretch properly */
+  height: auto;
+}

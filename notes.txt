@@ -1,0 +1,21 @@
+\*installed project using vite.
+
+\*clear all default code from the project.
+
+\*set the default css in index.css
+
+\*searched for best suited library. (Ant design in this case)
+
+\*npm install antd --save
+
+\*npm install dayjs
+
+\*keep localization in mind. created folder in src for every page like localization/en/common ,localization/en/homepage etc.
+
+\*npm install i18next react-i18next
+
+\*npm install i18next-browser-languagedetector i18next-http-backend
+
+\*npm i react-router-dom react-router .... To setup routes
+
+\*Added antd component like layout and others
