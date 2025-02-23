@@ -1,146 +1,143 @@
-import {arrayMove} from "@dnd-kit/sortable";
-import {Button, Flex, Grid, Layout, Typography} from "antd";
+import {Button, Flex, Grid, Layout} from "antd";
 import {Content} from "antd/es/layout/layout";
-import {useState} from "react";
 import {Outlet} from "react-router";
 import icons from "../../icons";
-import KPIs from "./kpis/KPIS";
 
-const initialDraggableItems = [
-  {
-    id: "Key Performance Metrics (KPIs)",
-    element: (
-      <div
-        style={{
-          display: "flex",
-          height: "300px",
-          flexDirection: "column",
-        }}
-      >
-        <KPIs />
-      </div>
-    ),
-  },
-  {
-    id: "Appointment & Booking Data",
-    element: (
-      <div
-        style={{
-          display: "flex",
-          height: "300px",
-        }}
-      >
-        {" "}
-        <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
-          Appointment & Booking Data
-        </Typography>
-      </div>
-    ),
-  },
-  {
-    id: "Test Reports & Processing Data",
-    element: (
-      <div
-        style={{
-          display: "flex",
-          height: "300px",
-        }}
-      >
-        <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
-          Test Reports & Processing Data
-        </Typography>
-      </div>
-    ),
-  },
-  {
-    id: "Revenue & Billing Data",
-    element: (
-      <div
-        style={{
-          display: "flex",
-          height: "300px",
-        }}
-      >
-        <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
-          Revenue & Billing Data
-        </Typography>
-      </div>
-    ),
-  },
-  {
-    id: "Inventory & Stock Data",
-    element: (
-      <div
-        style={{
-          display: "flex",
-          height: "300px",
-        }}
-      >
-        <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
-          Inventory & Stock Data
-        </Typography>
-      </div>
-    ),
-  },
-  {
-    id: "Technician & Staff Performance",
-    element: (
-      <div
-        style={{
-          display: "flex",
-          height: "300px",
-        }}
-      >
-        <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
-          Technician & Staff Performance
-        </Typography>
-      </div>
-    ),
-  },
-  {
-    id: "Health Trends & Analytics",
-    element: (
-      <div
-        style={{
-          display: "flex",
-          height: "300px",
-        }}
-      >
-        <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
-          Health Trends & Analytics
-        </Typography>
-      </div>
-    ),
-  },
-];
+// const initialDraggableItems = [
+//   {
+//     id: "Key Performance Metrics (KPIs)",
+//     element: (
+//       <div
+//         style={{
+//           display: "flex",
+//           height: "300px",
+//           flexDirection: "column",
+//         }}
+//       >
+//         <KPIs />
+//       </div>
+//     ),
+//   },
+//   {
+//     id: "Appointment & Booking Data",
+//     element: (
+//       <div
+//         style={{
+//           display: "flex",
+//           height: "300px",
+//         }}
+//       >
+//         {" "}
+//         <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
+//           Appointment & Booking Data
+//         </Typography>
+//       </div>
+//     ),
+//   },
+//   {
+//     id: "Test Reports & Processing Data",
+//     element: (
+//       <div
+//         style={{
+//           display: "flex",
+//           height: "300px",
+//         }}
+//       >
+//         <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
+//           Test Reports & Processing Data
+//         </Typography>
+//       </div>
+//     ),
+//   },
+//   {
+//     id: "Revenue & Billing Data",
+//     element: (
+//       <div
+//         style={{
+//           display: "flex",
+//           height: "300px",
+//         }}
+//       >
+//         <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
+//           Revenue & Billing Data
+//         </Typography>
+//       </div>
+//     ),
+//   },
+//   {
+//     id: "Inventory & Stock Data",
+//     element: (
+//       <div
+//         style={{
+//           display: "flex",
+//           height: "300px",
+//         }}
+//       >
+//         <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
+//           Inventory & Stock Data
+//         </Typography>
+//       </div>
+//     ),
+//   },
+//   {
+//     id: "Technician & Staff Performance",
+//     element: (
+//       <div
+//         style={{
+//           display: "flex",
+//           height: "300px",
+//         }}
+//       >
+//         <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
+//           Technician & Staff Performance
+//         </Typography>
+//       </div>
+//     ),
+//   },
+//   {
+//     id: "Health Trends & Analytics",
+//     element: (
+//       <div
+//         style={{
+//           display: "flex",
+//           height: "300px",
+//         }}
+//       >
+//         <Typography style={{fontWeight: "bold", fontSize: "22px"}}>
+//           Health Trends & Analytics
+//         </Typography>
+//       </div>
+//     ),
+//   },
+// ];
 
 const Dashboard = () => {
   const {useBreakpoint} = Grid;
-  const {xs, sm, md} = useBreakpoint();
-  const [draggableItems, setDraggableItems] = useState(false);
-  const [items, setItems] = useState(initialDraggableItems);
+  const {xs} = useBreakpoint();
+  // const [draggableItems, setDraggableItems] = useState(false);
+  // const [items, setItems] = useState(initialDraggableItems);
 
-  const getItemsPosition = (id: string) =>
-    items.findIndex((itm) => itm.id === id);
+  // const getItemsPosition = (id: string) =>
+  //   items.findIndex((itm) => itm.id === id);
 
-  const handleDraggableItemsPosition = () => {
-    setDraggableItems(!draggableItems);
-  };
+  // const handleDraggableItemsPosition = () => {
+  //   setDraggableItems(!draggableItems);
+  // };
 
   const saveDraggedItems = () => {
-    setDraggableItems(false);
+    // setDraggableItems(false);
   };
 
-  const handleDragEnd = (event) => {
-    const {active, over} = event;
-    if (active.id === over.id) return;
-    setItems((prev) => {
-      const originalPosition = getItemsPosition(active.id);
-      const newPosition = getItemsPosition(over.id);
-      if (originalPosition === -1 || newPosition === -1) return prev;
-      return arrayMove(prev, originalPosition, newPosition);
-    });
-  };
+  // const handleDragEnd = (event: any) => {
+  //   const {active, over} = event;
+  //   if (active.id === over.id) return;
+  //   setItems((prev) => {
+  //     const originalPosition = getItemsPosition(active.id);
+  //     const newPosition = getItemsPosition(over.id);
+  //     if (originalPosition === -1 || newPosition === -1) return prev;
+  //     return arrayMove(prev, originalPosition, newPosition);
+  //   });
+  // };
 
   return (
     <Layout style={{padding: "20px"}}>
@@ -159,7 +156,7 @@ const Dashboard = () => {
           iconPosition="end"
           variant="outlined"
           type="primary"
-          onClick={handleDraggableItemsPosition}
+          // onClick={handleDraggableItemsPosition}
         >
           {xs ? "" : "Customize View"}
         </Button>

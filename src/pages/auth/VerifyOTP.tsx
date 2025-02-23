@@ -6,7 +6,11 @@ import Button from "../../ui/button";
 export default function VerifyOTP({
   otpSent = true,
   mobileNumber = "7620808890",
-  goToSlide = (num: number) => {},
+  goToSlide = (_num: number) => {
+    {
+      void _num; // Prevents ESLint error
+    }
+  },
 }) {
   const [messageApi, contextHolder] = message.useMessage();
   const otpLength = 6; // Number of OTP digits

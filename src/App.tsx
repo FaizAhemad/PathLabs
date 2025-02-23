@@ -18,7 +18,7 @@ import Button from "./ui/button";
 function App() {
   console.log(import.meta.env.VITE_API_URL);
   const {i18n, t} = useTranslation("app");
-  const {Header, Content, Footer, Sider} = Layout;
+  const {Header, Content, Sider} = Layout;
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: {colorBgContainer, borderRadiusLG},
